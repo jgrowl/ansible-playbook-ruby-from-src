@@ -1,0 +1,9 @@
+---
+# This Playbook deploys ruby from source!
+
+- hosts: ruby-src
+  vars_files:
+    - vars/main.yml
+  user: root
+  tasks:
+  - include: tasks/install-ruby-from-src.yml
