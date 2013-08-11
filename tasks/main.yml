@@ -11,7 +11,7 @@
 
 # Install correct version of ruby from source
 - name: ruby-from-src | ensure directory temporary ruby download directory is present
-  file: state=directory path=$rubyTmpDir creates=$rubyTmpDir
+  file: state=directory path=$rubyTmpDir
 
 - name: ruby-from-src | Download ruby source 
   get_url: url=$rubyUrl dest=$rubyTmpDir
