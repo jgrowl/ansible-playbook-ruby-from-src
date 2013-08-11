@@ -14,7 +14,7 @@
   file: state=directory path=$rubyTmpDir creates=$rubyTmpDir
 
 - name: ruby-from-src | Download ruby source 
-  get_url: url=$rubyUrl dest=$rubyTmpDir creates=$rubyTmpDir
+  get_url: url=$rubyUrl dest=$rubyTmpDir
 
 - name: ruby-from-src | ensure ruby is extracted
   command: tar -xf $rubyCompressedFile chdir=/tmp/ruby creates=$tmpRubyPath
