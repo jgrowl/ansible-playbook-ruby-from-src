@@ -6,5 +6,6 @@
     - vars/main.yml
   user: $global_user
   sudo: $global_use_sudo
+  sudo_user: $global_sudo_user
   tasks:
   - include: tasks/main.yml
