@@ -17,7 +17,7 @@
   get_url: url=$rubyUrl dest=$rubyTmpDir
 
 - name: ruby-from-src | ensure ruby is extracted
-  command: tar -xf $rubyCompressedFile chdir=/tmp/ruby creates=$tmpRubyPath
+  command: tar -xf $rubyCompressedFile chdir=$rubyTmpDir creates=$tmpRubyPath
 
 - name: ruby-from-src | ensure ruby is configured
   command: ./configure chdir=$tmpRubyPath creates=$tmpRubyPath/Makefile
